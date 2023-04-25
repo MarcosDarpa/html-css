@@ -20,21 +20,31 @@
             padding: 10px;
         }
 
+        tbody > tr:nth-child(2n){
+            background-color: #b9aaaa;
+        }
+
         .num{
             text-align: right;
         }
-
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(194, 228, 194);
+        }
         thead{
-            background-color: gray;
+            background-color: rgb(20, 19, 19);
             color: white;
+        }
+
+        .populacao{
+            width: 100px;
         }
 
         tfoot{
-            background-color: gray;
+            background-color: rgb(19, 17, 17);
             color: white;
-        }
-        .td{
-            color: black;
         }
     </style>
 </head>
@@ -51,11 +61,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
 
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="row">Estado</th>
+                <th scope="row" class="populacao">População</th>
             </tr>
 
         </thead>
@@ -193,7 +204,7 @@
         </tbody>
 
         <tfoot>
-            <th>Totatal de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>210.147.125</strong></td>
         </tfoot>
 
